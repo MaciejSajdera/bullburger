@@ -1,42 +1,78 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import "../styles/header.scss"
+import { useStaticQuery, graphql } from "gatsby"
+import { FaTripadvisor } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = (props) => {
+
+  const data = useStaticQuery(graphql`
+
+  query MyNavQuery {
+    LangPL: datoCmsNavMobile(locale: {eq: "pl"}) {
+      home
+      menu
+      location
+    }
+
+    LangEN: datoCmsNavMobile(locale: {eq: "en"}) {
+      home
+      menu
+      location
+    }
+  }
+  `)
+
+
+  return (
+  <>
+  <header className={`mobileHeader ${props.navActive ? "menu-open" : "menu-closed"}`}>
+
+  <nav className={`nav-mobile`}>
+    <ul id="nav-items-list">
+        <li>
+          <a>{data.LangPL.home}</a>
+        </li>
+        <li>
+          <a>{data.LangPL.menu}</a>
+        </li>
+        <li>
+          <a>{data.LangPL.location}</a>
+        </li>
+    </ul>
+
+    <nav className={`nav-sub`}>
+      <ul id="nav-sub-list">
+        <li>
+          <a>PL</a>
+        </li>
+        <li>
+          |
+        </li>
+        <li>
+          <a>EN</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="social-media-icons">
+      <FaFacebook />
+      <span></span>
+      <FaTripadvisor />
     </div>
+
+  </nav>
+
+
   </header>
-)
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+
+  <header>
+
+  </header>
+  </>
+  )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
