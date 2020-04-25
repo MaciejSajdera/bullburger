@@ -10,8 +10,10 @@
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-offline": "^3.1.4",
     "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.2.3",
     "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-smoothscroll": "^1.1.0",
     "gatsby-source-datocms": "^2.1.27",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-sharp": "^2.4.6",
@@ -20,7 +22,8 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^6.0.0",
-    "react-icons": "^3.10.0"
+    "react-icons": "^3.10.0",
+    "use-global-hook": "^0.1.12"
   },
   "devDependencies": {
     "prettier": "2.0.4"

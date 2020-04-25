@@ -7,7 +7,7 @@ export const MainMenu = () => {
 
  return (
   
-  <div class="main-menu">
+  <div className={`main-menu`}>
     
   </div>
  )

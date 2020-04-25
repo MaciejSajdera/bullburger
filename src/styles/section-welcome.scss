@@ -4,4 +4,36 @@
     .gatsby-image-wrapper {
          height: 100vh;
     }
+
+    .bbg-logo {
+        display: flex;
+        justify-content: center;
+
+        svg {
+            position: absolute;
+            top: 40%;
+            margin: 0 auto;
+            width: 60vw;
+        }
+    }
+
+    .scroll-icon {
+        display: flex;
+        justify-content: center;
+
+        @keyframes arrowanimation {
+            0% {padding-top: 0px;}
+            50% {padding-top: 20px;}
+            100% {padding-top: 0px;}
+          }
+
+        svg {
+            position: absolute;
+            top: 85%;
+            margin: 0 auto;
+            width: 10vw;
+            animation: arrowanimation 1.5s infinite;
+        }
+
+    }
 }

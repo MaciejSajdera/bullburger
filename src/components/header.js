@@ -1,8 +1,22 @@
-import React from "react"
+import React, { useState} from "react"
 import "../styles/header.scss"
 import { useStaticQuery, graphql } from "gatsby"
 import { FaTripadvisor } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
+// import globalHook from 'use-global-hook';
+
+// const initialState = {
+//   initialLang: 0,
+// }
+
+// const actions = {
+//   switchLang: (store, change) => {
+//     const newLangValue = store.state.initialLang = change;
+//     store.setState({ initialLang: newLangValue });
+//   },
+// };
+
+// const useGlobal = globalHook(React, initialState, actions);
 
 const Header = (props) => {
 
@@ -23,34 +37,38 @@ const Header = (props) => {
   }
   `)
 
+  const [langChosen, setLang] = useState(false)
+
+  // const [globalState, globalActions] = useGlobal();
 
   return (
   <>
   <header className={`mobileHeader ${props.navActive ? "menu-open" : "menu-closed"}`}>
 
   <nav className={`nav-mobile`}>
+
     <ul id="nav-items-list">
         <li>
-          <a>{data.LangPL.home}</a>
+          <a>{langChosen ? data.LangEN.home : data.LangPL.home}</a>
         </li>
         <li>
-          <a>{data.LangPL.menu}</a>
+          <a>{langChosen ? data.LangEN.menu : data.LangPL.menu}</a>
         </li>
         <li>
-          <a>{data.LangPL.location}</a>
+          <a>{langChosen ? data.LangEN.location : data.LangPL.location}</a>
         </li>
     </ul>
 
     <nav className={`nav-sub`}>
       <ul id="nav-sub-list">
         <li>
-          <a>PL</a>
+          <a onClick={() => setLang(false)}>PL</a>
         </li>
         <li>
           |
         </li>
         <li>
-          <a>EN</a>
+          <a onClick={() =>  setLang(true)}>EN</a>
         </li>
       </ul>
     </nav>

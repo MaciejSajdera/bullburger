@@ -5,7 +5,7 @@ import "../styles/extra-menu-info.scss"
 export const ExtraMenuInfo = () => {
 
  return (
-    <div class="extra-menu-info">
+    <div className={`extra-menu-info`}>
 
     </div>
  )

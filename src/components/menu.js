@@ -17,8 +17,8 @@ export const Menu = () => {
   `)
 
  return (
-  <section id="menu" class="menu-section">
-    <div class="menu-wrapper">
+  <section id="menu" className={`menu-section`}>
+    <div className={`menu-wrapper`}>
 
       <h4>
         {data.datoCmsMenu.menuSlogan}
