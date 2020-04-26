@@ -23,10 +23,25 @@
                         padding: 0.8em;
                         font-family: "Source Sans Pro",sans-serif;
                         font-weight: 400;
-                        font-size: 110%;
+                        width:27.5vw;
 
                         &:first-child {
                             font-weight: 700;
+                            text-align: center;
+                            font-size: 115%;
+                            padding: 0.8em 0.5em 0 0;
+                        }
+
+                        &:nth-child(2){
+                            font-weight: 400;
+                            width: 60vw;
+                        }
+
+                        
+                        &:nth-child(3){
+                            font-weight: 700;
+                            width: 12.5vw;
+                            padding: 0.8em 0.5em 0 0;
                         }
                     }
                 }

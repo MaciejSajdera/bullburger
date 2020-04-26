@@ -5,7 +5,7 @@ import "../styles/menu.scss"
 import MainMenu from "./main-menu"
 import ExtraMenuInfo from "./extra-menu-info"
 
-export const Menu = () => {
+export const Menu = (props) => {
 
   const data = useStaticQuery(graphql`
   query MyQuery {
@@ -28,7 +28,7 @@ export const Menu = () => {
         {data.datoCmsMenu.menuHeader}
       </h2>
 
-        <MainMenu />
+        <MainMenu {...props}/>
 
         <ExtraMenuInfo />
 

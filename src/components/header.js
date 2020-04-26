@@ -37,7 +37,7 @@ const Header = (props) => {
   }
   `)
 
-  const [langChosen, setLang] = useState(false)
+
 
   // const [globalState, globalActions] = useGlobal();
 
@@ -49,26 +49,26 @@ const Header = (props) => {
 
     <ul id="nav-items-list">
         <li>
-          <a>{langChosen ? data.LangEN.home : data.LangPL.home}</a>
+          <a>{props.langChosen ? data.LangEN.home : data.LangPL.home}</a>
         </li>
         <li>
-          <a>{langChosen ? data.LangEN.menu : data.LangPL.menu}</a>
+          <a>{props.langChosen ? data.LangEN.menu : data.LangPL.menu}</a>
         </li>
         <li>
-          <a>{langChosen ? data.LangEN.location : data.LangPL.location}</a>
+          <a>{props.langChosen ? data.LangEN.location : data.LangPL.location}</a>
         </li>
     </ul>
 
     <nav className={`nav-sub`}>
       <ul id="nav-sub-list">
         <li>
-          <a onClick={() => setLang(false)}>PL</a>
+          <a onClick={() => props.setLang(false)}>PL</a>
         </li>
         <li>
           |
         </li>
         <li>
-          <a onClick={() =>  setLang(true)}>EN</a>
+          <a onClick={() =>  props.setLang(true)}>EN</a>
         </li>
       </ul>
     </nav>

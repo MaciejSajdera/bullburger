@@ -30,6 +30,8 @@ const Layout = ({ children }) => {
 
   const [navActive, setNavState] = useState(false)
 
+  const [langChosen, setLang] = useState(false)
+
   return (
     <>
           <div id="button-nav-mobile" onClick={() => setNavState(!navActive)}>
@@ -47,10 +49,10 @@ const Layout = ({ children }) => {
           </svg>
          </div>
 
-      <Header navActive={navActive}/>
+      <Header navActive={navActive} langChosen={langChosen} setLang={setLang}/>
 
       <SectionWelcome />
-      <Menu />
+      <Menu langChosen={langChosen} setLang={setLang} />
 
         <footer>
           © {new Date().getFullYear()}, Built with
