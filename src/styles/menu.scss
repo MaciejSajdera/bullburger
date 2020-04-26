@@ -7,6 +7,30 @@
         flex-flow: column;
         justify-content: center;
 
+        .main-menu {
+            color: black;
 
+            .menu-items {
+                color:black;
+
+                .burger {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+
+                    p {
+                        margin: 0 auto 0 0;
+                        padding: 0.8em;
+                        font-family: "Source Sans Pro",sans-serif;
+                        font-weight: 400;
+                        font-size: 110%;
+
+                        &:first-child {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
