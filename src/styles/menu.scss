@@ -1,5 +1,5 @@
 .menu-section {
-    padding: 82px 0;
+    padding: 50px 0 0 0;
     background-color: #ededed;
 
     .menu-wrapper {
@@ -12,6 +12,7 @@
 
             .menu-items {
                 color:black;
+                padding: 0.5em;
 
                 .burger {
                     display: flex;
@@ -28,20 +29,26 @@
                         &:first-child {
                             font-weight: 700;
                             text-align: center;
+                            padding: 0.8em 0em 0 0;
+                            width: 28%;
                             font-size: 115%;
-                            padding: 0.8em 0.5em 0 0;
                         }
 
                         &:nth-child(2){
                             font-weight: 400;
                             width: 60vw;
+                            padding: 0.8em 0em 1em 0.2em;
+                            width: 60%;
+                            font-size: 95%;
                         }
 
                         
                         &:nth-child(3){
                             font-weight: 700;
-                            width: 12.5vw;
-                            padding: 0.8em 0.5em 0 0;
+                            width: 13.5vw;
+                            padding: 0.8em 0em 0 0.2em;
+                            width: 12%;
+                            font-size: 100%;
                         }
                     }
                 }

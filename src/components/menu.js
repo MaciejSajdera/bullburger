@@ -5,6 +5,7 @@ import "../styles/menu.scss"
 import MainMenu from "./main-menu"
 import ExtraMenuInfo from "./extra-menu-info"
 
+
 export const Menu = (props) => {
 
   const data = useStaticQuery(graphql`
@@ -30,12 +31,18 @@ export const Menu = (props) => {
 
         <MainMenu {...props}/>
 
-        <ExtraMenuInfo />
+        <ExtraMenuInfo {...props}/>
 
     </div>
+
+
+
   </section>
+
+
  )
 }
+
 
 export default Menu
 

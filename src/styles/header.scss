@@ -7,7 +7,7 @@
     .menu-open {
         position: fixed;
         left: 0;
-        z-index: 2;
+        z-index: 9998;
         display: block;
         top: 0;
         width: 100%;
@@ -23,7 +23,7 @@
     opacity: 0;
     position: fixed;
     left: 0;
-    z-index: 2;
+    z-index: 9998;
     display: block;
     width: 100%;
     height: 100vh;
@@ -82,14 +82,19 @@
       flex-flow: column;
       justify-content: center;
 
+      a {
+        margin: 0 auto;
+      }
+
       svg {
         margin-bottom: 1rem;
         font-size: 250%;
         fill: white;
         margin: 0.5em auto;
-      }
+
       span {
         width: 7%;
+      }
       }
     }
   }

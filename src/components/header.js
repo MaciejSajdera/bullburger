@@ -1,22 +1,9 @@
-import React, { useState} from "react"
+import React from "react"
 import "../styles/header.scss"
 import { useStaticQuery, graphql } from "gatsby"
 import { FaTripadvisor } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
-// import globalHook from 'use-global-hook';
-
-// const initialState = {
-//   initialLang: 0,
-// }
-
-// const actions = {
-//   switchLang: (store, change) => {
-//     const newLangValue = store.state.initialLang = change;
-//     store.setState({ initialLang: newLangValue });
-//   },
-// };
-
-// const useGlobal = globalHook(React, initialState, actions);
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const Header = (props) => {
 
@@ -38,9 +25,6 @@ const Header = (props) => {
   `)
 
 
-
-  // const [globalState, globalActions] = useGlobal();
-
   return (
   <>
   <header className={`mobileHeader ${props.navActive ? "menu-open" : "menu-closed"}`}>
@@ -49,13 +33,28 @@ const Header = (props) => {
 
     <ul id="nav-items-list">
         <li>
-          <a>{props.langChosen ? data.LangEN.home : data.LangPL.home}</a>
+          <a onClick={() => {
+                            scrollTo('#welcome');
+                            props.setNavState(false)
+                            }
+                          
+          }>{props.langChosen ? data.LangEN.home : data.LangPL.home}</a>
         </li>
         <li>
-          <a>{props.langChosen ? data.LangEN.menu : data.LangPL.menu}</a>
+          <a onClick={() => {
+                            scrollTo('#menu');
+                            props.setNavState(false)
+                            }
+                          
+        }>{props.langChosen ? data.LangEN.menu : data.LangPL.menu}</a>
         </li>
         <li>
-          <a>{props.langChosen ? data.LangEN.location : data.LangPL.location}</a>
+          <a onClick={() => {
+                            scrollTo('#location');
+                            props.setNavState(false)
+                            }
+                          
+        }>{props.langChosen ? data.LangEN.location : data.LangPL.location}</a>
         </li>
     </ul>
 
@@ -74,9 +73,13 @@ const Header = (props) => {
     </nav>
 
     <div id="social-media-icons">
-      <FaFacebook />
+          <a href="https://www.facebook.com/bullburgerkrakow/">
+            <FaFacebook />
+          </a>
       <span></span>
-      <FaTripadvisor />
+          <a href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d10057087-Reviews-BULL_Burger_GRILL-Krakow_Lesser_Poland_Province_Southern_Poland.html">
+            <FaTripadvisor />
+          </a>
     </div>
 
   </nav>

@@ -1,3 +1,40 @@
-div {
-    color: black;
+.extra-menu-info {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0.5em;
+    font-family: "Source Sans Pro",sans-serif;
+
+    span#border-top {
+        display: block;
+        margin: 0 auto;
+        width: 85%;
+        border-top: 2px solid #a6a6a6;
+    }
+
+    .extra-menu-item {
+        display: flex;
+        padding: 1em 3em 0em 3em;
+
+        p {
+          font-weight: 400;
+
+            &:first-child {
+            font-weight: 700;
+            width: 70%;
+            }
+
+            &:nth-child(2) {
+                font-weight: 700;
+                width: 30%;
+                text-align: right;
+                }
+        }
+    }
+
+    .extra-info {
+        text-align: center;
+        font-size: 110%;
+        margin-top: 1rem;
+    }
 }
