@@ -24,8 +24,8 @@ export default function Header(props) {
     }
   }
   `)
-
-    if (typeof window === `undefined`) {
+      //for SSR production
+    if (typeof window !== `undefined`) {
       const query = true
     } else {
       const query = window.matchMedia(maxMobile)
