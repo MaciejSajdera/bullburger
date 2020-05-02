@@ -25,11 +25,10 @@ export default function Header(props) {
   }
   `)
       //for SSR production
-    if (typeof window !== `undefined`) {
-      const query = true
+    if (typeof window === `undefined`) {
+      var query = true
     } else {
-      const query = window.matchMedia(maxMobile)
-      return query
+      var query = window.matchMedia(maxMobile)
     }
 
     const [match, setMatch] = useState(query.matches)
