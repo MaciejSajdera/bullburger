@@ -46,6 +46,7 @@ const Location = (props) => {
         {allData.locationHeader}
       </h2>
 
+      <div className={`location-items`}>
       {
       allDataInfo.nodes.map((block, index) => (
                         <div key={index} className={`days-hours`}>
@@ -54,6 +55,7 @@ const Location = (props) => {
                         </div>
       ))
       }
+      </div>
       <p className={`adress-info`}>
         {allData.adress}
       </p>

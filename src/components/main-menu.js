@@ -58,20 +58,20 @@ export const MainMenu = (props) => {
     <div className={`menu-items`}>
     {
     allData.nodes.sort(
-                                          (a, b) => {
-                                          const positionA = a.position;
-                                          const positionB = b.position;
-                                          let comparision = 0;
-                                            if(positionA > positionB) {
-                                              comparision = 1;
-                                            } else if (positionA < positionB) {
-                                              comparision = -1
-                                            }
-                                            return comparision
-                                          }
-                                          )
+                        (a, b) => {
+                        const positionA = a.position;
+                        const positionB = b.position;
+                        let comparision = 0;
+                          if(positionA > positionB) {
+                            comparision = 1;
+                          } else if (positionA < positionB) {
+                            comparision = -1
+                          }
+                          return comparision
+                        }
+                      )
                 
-                .map((block, index) => (
+                      .map((block, index) => (
                         <div key={index} className={`burger`}>
                         <p>{block.burger[0].name}<br />
                            {block.burger[0].secondName}
@@ -79,7 +79,7 @@ export const MainMenu = (props) => {
                         <p>{block.burger[1].description}</p>
                         <p>{block.burger[2].burgerPrice}{currensy}</p>
                         </div>
-                ))
+                      ))
     }
     </div>
 

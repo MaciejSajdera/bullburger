@@ -12,9 +12,14 @@
          margin-bottom: 1em;
      }
 
-    .days-hours {
+     .location-items {
+        margin: auto;
+        width: 80vw;
+        max-width: 500px;
+
+      .days-hours {
         display: flex;
-        padding: 0em 4em 0em 4em;
+        padding: 0em 2em 0em 2em;
 
         p {
           text-align: left;
@@ -30,6 +35,7 @@
                 width: 50%;
                 text-align: right;
                 }
+            }
         }
     }
 

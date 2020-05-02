@@ -1,16 +1,20 @@
+
+span#border-top {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    border-top: 2px solid #a6a6a6;
+    max-width: 800px;
+}
+
 .extra-menu-info {
     display: flex;
     justify-content: center;
     flex-flow: column;
     padding: 0.5em;
     font-family: "Source Sans Pro",sans-serif;
-
-    span#border-top {
-        display: block;
-        margin: 0 auto;
-        width: 85%;
-        border-top: 2px solid #a6a6a6;
-    }
+    margin: auto;
+    max-width: 600px;
 
     .extra-menu-item {
         display: flex;

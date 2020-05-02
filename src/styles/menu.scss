@@ -8,11 +8,12 @@
         justify-content: center;
 
         .main-menu {
-            color: black;
+            margin: auto;
 
             .menu-items {
                 color:black;
                 padding: 0.5em;
+                max-width: 800px;
 
                 .burger {
                     display: flex;
@@ -20,24 +21,23 @@
                     justify-content: center;
 
                     p {
-                        margin: 0 auto 0 0;
-                        padding: 0.8em;
+                        margin: 0 auto 0 auto;
                         font-family: "Source Sans Pro",sans-serif;
                         font-weight: 400;
-                        width:27.5vw;
 
                         &:first-child {
                             font-weight: 700;
                             text-align: center;
-                            padding: 0.8em 0em 0 0;
+                            padding: 0em 0em 1.5em 0em;
                             width: 28%;
                             font-size: 115%;
+                            max-width: 120px;
+                            margin-right: 0em;
                         }
 
                         &:nth-child(2){
                             font-weight: 400;
-                            width: 60vw;
-                            padding: 0.8em 0em 1em 0.2em;
+                            padding: 0em 0em 1em 0.2em;
                             width: 60%;
                             font-size: 95%;
                         }
@@ -45,8 +45,7 @@
                         
                         &:nth-child(3){
                             font-weight: 700;
-                            width: 13.5vw;
-                            padding: 0.8em 0em 0 0.2em;
+                            padding: 0em 0em 0em 0.2em;
                             width: 12%;
                             font-size: 100%;
                         }

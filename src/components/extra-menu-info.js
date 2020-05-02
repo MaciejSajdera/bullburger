@@ -17,6 +17,7 @@ export const ExtraMenuInfo = (props) => {
               price
             }
           }
+          position
         }
       }
 
@@ -30,6 +31,7 @@ export const ExtraMenuInfo = (props) => {
                price
              }
            }
+           position
          }
        }
 
@@ -57,12 +59,27 @@ export const ExtraMenuInfo = (props) => {
    const currensy = ' zł'
 
  return (
+    <>
+    <span id={`border-top`}></span>
     <div className={`extra-menu-info`}>
-       <span id={`border-top`}></span>
+
 
 
     {
-    allData.nodes.map((block, index) => (
+    allData.nodes.sort(
+      (a, b) => {
+      const positionA = a.position;
+      const positionB = b.position;
+      let comparision = 0;
+        if(positionA > positionB) {
+          comparision = 1;
+        } else if (positionA < positionB) {
+          comparision = -1
+        }
+        return comparision
+      }
+      )
+        .map((block, index) => (
                         <div key={index} className={`extra-menu-item`}>
                         <p>{block.extraMenuItem[0].name}</p>
                         <p>{block.extraMenuItem[1].price}{currensy}</p>
@@ -80,6 +97,7 @@ export const ExtraMenuInfo = (props) => {
    }
 
    </div>
+   </>
  )
 }
 

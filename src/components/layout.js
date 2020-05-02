@@ -1,7 +1,6 @@
 import React, { useState} from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
-import HamburgerButton from "./hamburger-button"
 import Header from "./header"
 import SectionWelcome from "./section-welcome"
 import Menu from "./menu"
@@ -22,25 +21,41 @@ const Layout = () => {
   const [navScrolled, changeNav] = useState(false)
 
   useScrollPosition(({ currPos }) => {
-    const isScrolled = currPos.y < -780
+    let firstOffsetTop = document.getElementById('menu').offsetTop;
+    let firstOffsetTopFormatted = (-firstOffsetTop+30);
+
+    const isScrolled = currPos.y < firstOffsetTopFormatted
     if (isScrolled !== navScrolled) changeNav(isScrolled)
   }, [navScrolled])
 
+
+  const commonProps = {
+    setNavState: setNavState,
+    navActive: navActive,
+    navScrolled: navScrolled,
+    changeNav: changeNav,
+    useScrollPosition: useScrollPosition
+  }
+
+  const langProps = {
+    langChosen: langChosen,
+    setLang: setLang
+  }
+
   return (
     <>
-      <HamburgerButton setNavState={setNavState} navActive={navActive} useScrollPosition={useScrollPosition} navScrolled={navScrolled} changeNav={changeNav}/>
 
-      <Header setNavState={setNavState} navActive={navActive} langChosen={langChosen} setLang={setLang}/>
+      <Header {...commonProps} {...langProps}/>
 
       <SectionWelcome />
 
-      <Menu langChosen={langChosen} setLang={setLang}/>
+      <Menu {...langProps}/>
 
-      <Location langChosen={langChosen} setLang={setLang} />
+      <Location {...langProps} />
 
       <LeafletMap />
 
-      <Footer />
+      <Footer {...langProps} />
     </>
 
 

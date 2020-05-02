@@ -9,21 +9,23 @@ import scrollTo from 'gatsby-plugin-smoothscroll'
 export const SectionWelcome = () => {
 
   const data =  useStaticQuery(graphql`
-  query MainPhoto {
-      datoCmsMainPhoto {
-        mainPhoto {
-          fluid(imgixParams: {auto: "compress", fm: "jpg"}) {
-            ...GatsbyDatoCmsFluid
-          }
-          alt
+  query MyQuery {
+    file(relativePath: {eq: "main-photo.jpg"}) {
+      childImageSharp {
+        fluid(quality: 100) {
+          base64
+          srcWebp
+          srcSetWebp
         }
       }
+    }
   }
+  
 `)
 
  return (
   <section id={`welcome`} className={`first-section`}>
-    <Img fluid={data.datoCmsMainPhoto.mainPhoto.fluid} />
+    <Img fluid={data.file.childImageSharp.fluid} />
     <div className={`bbg-logo`}>
       <BbgSvgLogo />
     </div>
