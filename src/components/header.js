@@ -25,7 +25,13 @@ export default function Header(props) {
   }
   `)
 
-    const query = window.matchMedia(maxMobile) || true
+    if (typeof window === `undefined`) {
+      const query = true
+    } else {
+      const query = window.matchMedia(maxMobile)
+      return query
+    }
+
     const [match, setMatch] = useState(query.matches)
     
     useEffect(() => {
@@ -35,7 +41,6 @@ export default function Header(props) {
     })
 
     return match ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
-
 
 
   } 
