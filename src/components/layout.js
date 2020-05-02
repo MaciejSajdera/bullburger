@@ -55,7 +55,7 @@ const Layout = () => {
 
       <LeafletMap />
 
-      <Footer {...langProps} />
+      <Footer {...langProps}/>
     </>
 
 

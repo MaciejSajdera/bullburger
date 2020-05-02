@@ -6,7 +6,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const maxMobile = `screen and (max-width: 1000px)`
 
-const Header = (props) => {
+export default function Header(props) {
 
   const data = useStaticQuery(graphql`
 
@@ -24,16 +24,21 @@ const Header = (props) => {
     }
   }
   `)
-    //if SSR this should have an if statement: **if (typeof window !== `undefined`)**
-    const query = window.matchMedia(maxMobile)
+
+    const query = window.matchMedia(maxMobile) || true
     const [match, setMatch] = useState(query.matches)
+    
     useEffect(() => {
       const handleMatch = q => setMatch(q.matches)
       query.addListener(handleMatch)
       return () => query.removeListener(handleMatch)
     })
+
     return match ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
-}
 
 
-export default Header
+
+  } 
+
+
+
