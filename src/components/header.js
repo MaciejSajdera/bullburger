@@ -5,7 +5,18 @@ import DesktopHeader from "./desktop-header"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 function getWindowDimensions() {
+  //for SSR rendering
+  if (typeof window === `undefined`) {
+      let width = 1000;
+      let height = 1000
+      return {
+        width,
+        height
+      };
+  } 
+  
   const { innerWidth: width, innerHeight: height } = window;
+
   return {
     width,
     height
@@ -61,7 +72,7 @@ const Header = (props) => {
     //   return () => query.removeListener(handleMatch)
     // })
 
-    const { height, width } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     const isMobile = width < 1000;
 
