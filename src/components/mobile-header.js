@@ -7,8 +7,6 @@ import HamburgerButton from "./hamburger-button"
 
 const MobileHeader = (props) => {
 
-  console.log('mobile header')
-
   return (
   <>
   <HamburgerButton {...props} />

@@ -7,8 +7,6 @@ import BbgMiniSvgLogo from "../images/bbg-mini-logo.inline.svg"
 
 const DesktopHeader = (props) => {
 
-  console.log('desktop header');
-
   return (
   <>
 
