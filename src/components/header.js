@@ -4,9 +4,20 @@ import MobileHeader from "./mobile-header"
 import DesktopHeader from "./desktop-header"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Media from 'react-media';
+import { UserAgent } from 'react-useragent';
+import { createMedia } from "@artsy/fresnel"
+
 
 const Header = (props) => {
 
+  // const { MediaContextProvider, Media } = createMedia({
+  //   breakpoints: {
+  //     mobile: 0,
+  //     desktop: 1024,
+  //   },
+  // })
+
+  
   const data = useStaticQuery(graphql`
 
   query MyNavQuery {
@@ -23,33 +34,56 @@ const Header = (props) => {
     }
   }
   `)
-      //for SSR production
-    // if (typeof window === `undefined`) {
-    //   var query = true
-    // } else {
-    //   var query = window.matchMedia(maxMobile)
-    // }
-
-    // const [match, setMatch] = useState(query.matches)
-    
-    // useEffect(() => {
-    //   const handleMatch = q => setMatch(q.matches)
-    //   query.addListener(handleMatch)
-    //   return () => query.removeListener(handleMatch)
-    // })
-
-    // const { width } = useWindowDimensions();
-
-    // const isMobile = width < 1000;
-
-    // return isMobile ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
-
 
     //REACT MEDIA
     //https://github.com/ReactTraining/react-media
 
     return (
+      
             <>
+
+        <Media query={{ minWidth: 1000 }}>
+          {matches =>
+            matches ? (
+              <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
+            ) : (
+              <MobileHeader {...props} data={data} scrollTo={scrollTo} />
+            )
+          }
+        </Media>
+
+
+{/* <MediaContextProvider>
+    <Media at="mobile">
+    <MobileHeader {...props} data={data} scrollTo={scrollTo} />
+    </Media>
+    <Media greaterThanOrEqual="desktop">
+    <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
+    </Media>
+  </MediaContextProvider> */}
+
+
+
+
+        {/* <UserAgent>
+        {({ ua }) => {
+          return ua.mobile ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
+        }}
+        </UserAgent> */}
+
+                {/* <Media
+                    queries={{ medium: "(max-width: 999px)" }}
+                    defaultMatches={{ medium: state.device === 'mobile' }}
+                    render={() => <MobileHeader {...props} data={data} scrollTo={scrollTo}/>}
+                  />
+
+                  <Media
+                    queries={{ medium: "(min-width: 1000px)" }}
+                    defaultMatches={{ medium: state.device === 'desktop' }}
+                    render={() => <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>}
+                  /> */}
+
+{/* 
         <Media queries={{
           small: "(max-width: 999px)",
           large: "(min-width: 1000px)"
@@ -60,7 +94,7 @@ const Header = (props) => {
               {matches.large && <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>}
             </Fragment>
           )}
-        </Media>
+        </Media> */}
             </>
     ) 
 

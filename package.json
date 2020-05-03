@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@artsy/fresnel": "^1.1.0",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
@@ -28,6 +29,7 @@
     "react-icons": "^3.10.0",
     "react-leaflet": "^2.6.3",
     "react-media": "^1.10.0",
+    "react-useragent": "^1.1.2",
     "use-global-hook": "^0.1.12"
   },
   "devDependencies": {
