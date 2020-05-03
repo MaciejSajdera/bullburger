@@ -76,7 +76,9 @@ const Header = (props) => {
 
     const isMobile = width < 1000;
 
-    return isMobile ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
+    // return isMobile ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
+
+    return <MobileHeader {...props} data={data} scrollTo={scrollTo}/>
 
 
   } 
