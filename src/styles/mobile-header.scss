@@ -51,6 +51,30 @@
       li {
         margin: 2rem auto;
         list-style: none;
+
+        a {
+          transition: 0.3s ease-in-out;
+        }
+
+        a.english {
+          animation: mymove3 1s;
+        }
+
+        a.polish {
+          animation: mymove4 1s;
+        }
+
+        @keyframes mymove3 {
+          0% {transform: translateX(0%); opacity: 0}
+          50% {transform: translateX(-100%)}
+          100% {transform: translateX(0%); opacity: 1}
+        }
+
+        @keyframes mymove4 {
+          0% {transform: translateX(0%); opacity: 0}
+          50% {transform: translateX(-100%)}
+          100% {transform: translateX(0%); opacity: 1}
+        }
       }
     }
 

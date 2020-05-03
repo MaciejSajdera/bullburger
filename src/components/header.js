@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { Fragment } from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import MobileHeader from "./mobile-header"
 import DesktopHeader from "./desktop-header"
 import scrollTo from 'gatsby-plugin-smoothscroll'
+import Media from 'react-media';
 
 const Header = (props) => {
 
@@ -43,7 +44,25 @@ const Header = (props) => {
 
     // return isMobile ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
 
-    return <MobileHeader {...props} data={data} scrollTo={scrollTo}/>
+
+    //REACT MEDIA
+    //https://github.com/ReactTraining/react-media
+
+    return (
+            <>
+        <Media queries={{
+          small: "(max-width: 999px)",
+          large: "(min-width: 1000px)"
+        }}>
+          {matches => (
+            <Fragment>
+              {matches.small && <MobileHeader {...props} data={data} scrollTo={scrollTo}/>}
+              {matches.large && <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>}
+            </Fragment>
+          )}
+        </Media>
+            </>
+    ) 
 
 
   } 

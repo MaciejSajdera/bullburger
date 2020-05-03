@@ -104,6 +104,27 @@
             width: 100%;
           }
         }
+
+        a.english {
+          animation: mymove1 1s;
+        }
+
+        a.polish {
+          animation: mymove2 1s;
+        }
+
+        @keyframes mymove1 {
+          0% {transform: translateX(0%); opacity: 0}
+          50% {transform: translateX(-1000%); opacity: 0.1}
+          100% {transform: translateX(0%); opacity: 1}
+        }
+
+        @keyframes mymove2 {
+          0% {transform: translateX(0%); opacity: 0}
+          50% {transform: translateX(-1000%); opacity: 0.1}
+          100% {transform: translateX(0%); opacity: 1}
+        }
+
       }
     }
   }

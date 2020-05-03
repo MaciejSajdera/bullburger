@@ -52,6 +52,30 @@ module.exports = {
       options: {
       linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Bull Burger Grill`,
+        short_name: `BBG`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a41833`,
+        display: `standalone`,
+        icon: `src/images/bbg-mini-logo-white.inline.svg`, // This path is relative to the root of the site.
+        icons: [
+        {
+          src: `/images/bbg-mini-logo-white.inline.svg`,
+          sizes: `192x192`,
+          type: `image/svg`,
+        },
+        {
+        src: `/images/bbg-mini-logo-white.inline.svg`,
+        sizes: `512x512`,
+        type: `image/svg`,
+        },
+        ],
+      },
+    },
   ],
 }
