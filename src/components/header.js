@@ -33,9 +33,9 @@ const Header = (props) => {
         <Media query="(max-width: 999px)" defaultMatches={true}>
           {matches =>
             matches ? (
-              <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
-            ) : (
               <MobileHeader {...props} data={data} scrollTo={scrollTo} />
+            ) : (
+              <DesktopHeader {...props} data={data} scrollTo={scrollTo} />
             )
           }
         </Media>
