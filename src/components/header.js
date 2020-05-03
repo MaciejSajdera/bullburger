@@ -4,9 +4,31 @@ import MobileHeader from "./mobile-header"
 import DesktopHeader from "./desktop-header"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-const maxMobile = `screen and (max-width: 1000px)`
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
 
-export default function Header(props) {
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
+
+const Header = (props) => {
 
   const data = useStaticQuery(graphql`
 
@@ -25,24 +47,29 @@ export default function Header(props) {
   }
   `)
       //for SSR production
-    if (typeof window === `undefined`) {
-      var query = true
-    } else {
-      var query = window.matchMedia(maxMobile)
-    }
+    // if (typeof window === `undefined`) {
+    //   var query = true
+    // } else {
+    //   var query = window.matchMedia(maxMobile)
+    // }
 
-    const [match, setMatch] = useState(query.matches)
+    // const [match, setMatch] = useState(query.matches)
     
-    useEffect(() => {
-      const handleMatch = q => setMatch(q.matches)
-      query.addListener(handleMatch)
-      return () => query.removeListener(handleMatch)
-    })
+    // useEffect(() => {
+    //   const handleMatch = q => setMatch(q.matches)
+    //   query.addListener(handleMatch)
+    //   return () => query.removeListener(handleMatch)
+    // })
 
-    return match ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
+    const { height, width } = useWindowDimensions();
+
+    const isMobile = width < 1000;
+
+    return isMobile ? <MobileHeader {...props} data={data} scrollTo={scrollTo}/> : <DesktopHeader {...props} data={data} scrollTo={scrollTo}/>
 
 
   } 
 
+  export default Header
 
 

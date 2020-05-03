@@ -12,10 +12,8 @@ export const SectionWelcome = () => {
   query MyQuery {
     file(relativePath: {eq: "main-photo.jpg"}) {
       childImageSharp {
-        fluid(quality: 100) {
-          base64
-          srcWebp
-          srcSetWebp
+        fluid(quality: 100, maxWidth: 3080) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
