@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 import Header from "./header"
+import OrderButton from "./order-button"
 import SectionWelcome from "./section-welcome"
 import Menu from "./menu"
 import Location from "./location"
@@ -46,6 +47,8 @@ const Layout = () => {
     <>
 
       <Header {...commonProps} {...langProps}/>
+
+      <OrderButton {...langProps} navScrolled={navScrolled}/>
 
       <SectionWelcome />
 

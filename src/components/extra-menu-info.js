@@ -91,7 +91,7 @@ export const ExtraMenuInfo = (props) => {
    {
    allDataInfo.nodes.map((block, index) => (
       <div key={index} className={`extra-info`}>
-      <p>{block.extraMenuInfo}</p>
+      <p id={`text-info`}>{block.extraMenuInfo}</p>
       </div>
    ))
    }

@@ -1,0 +1,56 @@
+
+#goorderButton {
+    position: fixed;
+    right: 2.35em;
+    top: 10em;
+    z-index: 1;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background: transparent;
+    border: 3px solid #3CB359;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-family: "Source Sans Pro",sans-serif;
+    color: white;
+    transition: 0.3s ease-in-out;
+    line-height: 0.9;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    box-shadow: none;
+
+    @media screen and (max-width: 999px) {
+        width: 70px;
+        height: 70px;
+        right: 75.5%;
+        top: 2%;
+        border: 2px solid #3CB359;
+    }
+
+    @media screen and (max-width: 321px) {
+        right: 72.5%;
+        top: 2%;
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+        right: 85%;
+        top: 3%;
+      }
+
+      @media screen and (min-width: 768px) and (max-height: 440px) and (orientation: landscape) {
+        right: 85%;
+        top: 3%;
+      }
+
+    &:hover {
+        transform: scale(1.4);
+        background: #3CB359;
+    }
+
+    img#widget-logo{
+    margin: auto;
+    }
+
+}

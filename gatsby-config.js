@@ -60,8 +60,7 @@ module.exports = {
         short_name: `BBG`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#a41833!important`,
-        display: `standalone`,
+        theme_color: `#a41833`,
         icon: `src/images/bbg-mini-logo-white.inline.svg`, // This path is relative to the root of the site.
         icons: [
         {
@@ -73,9 +72,15 @@ module.exports = {
         src: `/images/bbg-mini-logo-white.inline.svg`,
         sizes: `512x512`,
         type: `image/svg`,
-        },
+        }
         ],
       },
+    },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: '/static/goorder.js',
+        }
     },
   ],
 }

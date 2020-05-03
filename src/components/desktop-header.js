@@ -1,8 +1,8 @@
 import React from "react"
 import "../styles/desktop-header.scss"
-import { FaTripadvisor } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import BbgMiniSvgLogo from "../images/bbg-mini-logo.inline.svg"
+import TripAdvisorLogo from "../images/tripadvisor.inline.svg"
 
 
 const DesktopHeader = (props) => {
@@ -68,7 +68,7 @@ const DesktopHeader = (props) => {
 
       <div id="social-media-icons">
           <a href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d10057087-Reviews-BULL_Burger_GRILL-Krakow_Lesser_Poland_Province_Southern_Poland.html">
-            <FaTripadvisor />
+          <TripAdvisorLogo />
           </a>
           <a href="https://www.facebook.com/bullburgerkrakow/">
             <FaFacebook />

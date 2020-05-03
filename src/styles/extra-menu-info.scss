@@ -1,7 +1,7 @@
 
 span#border-top {
     display: block;
-    margin: 0 auto;
+    margin: 1em auto auto auto;
     width: 85%;
     border-top: 2px solid #a6a6a6;
     max-width: 800px;
@@ -11,7 +11,7 @@ span#border-top {
     display: flex;
     justify-content: center;
     flex-flow: column;
-    padding: 0.5em;
+    padding: 1.5em 0.5em 0.5em 0.5em;
     font-family: "Source Sans Pro",sans-serif;
     margin: auto;
     max-width: 600px;
@@ -40,5 +40,9 @@ span#border-top {
         text-align: center;
         font-size: 110%;
         margin-top: 1rem;
+
+        p#text-info{
+            margin: 1em 0em 2.5em 0em
+        }
     }
 }

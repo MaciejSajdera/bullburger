@@ -3,6 +3,7 @@ import "../styles/mobile-header.scss"
 import { FaTripadvisor } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import HamburgerButton from "./hamburger-button"
+// import TripAdvisorLogo from "../images/tripadvisor.inline.svg"
 
 
 const MobileHeader = (props) => {
@@ -63,13 +64,18 @@ const MobileHeader = (props) => {
     </nav>
 
     <div id="social-media-icons">
-          <a href="https://www.facebook.com/bullburgerkrakow/">
+    <a id={`facebook-icon`} href="https://www.facebook.com/bullburgerkrakow/">
             <FaFacebook />
           </a>
       <span></span>
-          <a href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d10057087-Reviews-BULL_Burger_GRILL-Krakow_Lesser_Poland_Province_Southern_Poland.html">
+          <a id={`facebook-icon`} href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d10057087-Reviews-BULL_Burger_GRILL-Krakow_Lesser_Poland_Province_Southern_Poland.html">
             <FaTripadvisor />
           </a>
+          
+          {/* trip-icon with text */}
+          {/* <a id={`trip-icon`}href="https://pl.tripadvisor.com/Restaurant_Review-g274772-d10057087-Reviews-BULL_Burger_GRILL-Krakow_Lesser_Poland_Province_Southern_Poland.html">
+          <TripAdvisorLogo />
+          </a> */}
     </div>
 
   </nav>
