@@ -28,7 +28,6 @@ const DesktopHeader = (props) => {
                             props.setNavState(false)
                             }
                             }
-                            // className={`${props.langChosen ? "english" : "polish"}`}
                             >
                             {props.langChosen ? props.data.LangEN.home : props.data.LangPL.home}</a>
         </li>
@@ -38,7 +37,6 @@ const DesktopHeader = (props) => {
                             props.setNavState(false)
                             }
                             }
-                            // className={`${props.langChosen ? "english" : "polish"}`}
                             >
                             {props.langChosen ? props.data.LangEN.menu : props.data.LangPL.menu}</a>
         </li>
@@ -48,7 +46,6 @@ const DesktopHeader = (props) => {
                             props.setNavState(false)
                             }
                             }
-                            // className={`${props.langChosen ? "english" : "polish"}`}
                             >
                             {props.langChosen ? props.data.LangEN.location : props.data.LangPL.location}</a>
         </li>
