@@ -18,13 +18,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Bull Burger Grill`,
+        short_name: `BBG`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#f7f0eb`,
+        theme_color: `#a41833`,
+        icon: `src/images/bbg-mini-logo.inline.svg`, // This path is relative to the root of the site.
+        icons: [
+        {
+          src: `/images/bbg-mini-logo.inline.svg`,
+          sizes: `192x192`,
+          type: `image/svg`,
+        },
+        {
+        src: `/images/bbg-mini-logo.inline.svg`,
+        sizes: `512x512`,
+        type: `image/svg`,
+        }
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -53,28 +64,6 @@ module.exports = {
       linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Bull Burger Grill`,
-        short_name: `BBG`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a41833`,
-        icon: `src/images/bbg-mini-logo.inline.svg`, // This path is relative to the root of the site.
-        icons: [
-        {
-          src: `/images/bbg-mini-logo.inline.svg`,
-          sizes: `192x192`,
-          type: `image/svg`,
-        },
-        {
-        src: `/images/bbg-mini-logo.inline.svg`,
-        sizes: `512x512`,
-        type: `image/svg`,
-        }
-        ],
-      },
-    },
+
   ],
 }
