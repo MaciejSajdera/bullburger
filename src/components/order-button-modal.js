@@ -17,6 +17,8 @@ const customStyles = {
  
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#___gatsby')
+
+let appElement = document.getElementById('#___gatsby')
  
 export default function OrderButtonModal(){
   const [modalIsOpen,setIsOpen] = React.useState(false);
@@ -64,6 +66,6 @@ export default function OrderButtonModal(){
     );
 }
 
-ReactDOM.render(<OrderButtonModal />, document.getElementById("___gatsby"));
+ReactDOM.render(<OrderButtonModal />, appElement);
 
 
