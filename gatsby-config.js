@@ -76,11 +76,5 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-load-script",
-      options: {
-        src: '/static/goorder.js',
-        }
-    },
   ],
 }
