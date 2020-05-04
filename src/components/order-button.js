@@ -1,9 +1,8 @@
 import React from "react"
 import {Helmet} from "react-helmet"
 import "../styles/goorder.scss"
-import Img from "gatsby-image"
 
-const OrderButton = (props) => {
+const OrderButton = () => {
 
     return (
       <>
