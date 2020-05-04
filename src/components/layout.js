@@ -1,7 +1,10 @@
 import React, { useState} from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Header from "./header"
-import OrderButtonModal from "./order-button-modal"
+// import OrderButtonModal from "./order-button-modal"
+// import OrderButton from "./order-button-modal"
+// import OrderButtonLoadable from "./order-button-loadable"
+import OrderButtonLazy from "./order-button-lazy"
 import SectionWelcome from "./section-welcome"
 import Menu from "./menu"
 import Location from "./location"
@@ -47,7 +50,7 @@ const Layout = () => {
 
       <Header {...commonProps} {...langProps}/>
 
-      <OrderButtonModal />
+      <OrderButtonLazy />
 
       <SectionWelcome />
 
