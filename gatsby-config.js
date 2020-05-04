@@ -61,15 +61,15 @@ module.exports = {
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a41833`,
-        icon: `src/images/bbg-mini-logo-white.inline.svg`, // This path is relative to the root of the site.
+        icon: `src/images/bbg-mini-logo.inline.svg`, // This path is relative to the root of the site.
         icons: [
         {
-          src: `/images/bbg-mini-logo-white.inline.svg`,
+          src: `/images/bbg-mini-logo.inline.svg`,
           sizes: `192x192`,
           type: `image/svg`,
         },
         {
-        src: `/images/bbg-mini-logo-white.inline.svg`,
+        src: `/images/bbg-mini-logo.inline.svg`,
         sizes: `512x512`,
         type: `image/svg`,
         }
