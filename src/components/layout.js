@@ -48,7 +48,7 @@ const Layout = () => {
 
       <Header {...commonProps} {...langProps}/>
 
-      <OrderButton {...langProps} navScrolled={navScrolled}/>
+      <OrderButton />
 
       <SectionWelcome />
 

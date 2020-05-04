@@ -6,11 +6,20 @@
 
 // You can delete this file if you're not using it
 
-const React = require("react")
-const Layout = require("./src/components/layout").default
+const { Helmet } = require("react-helmet")
 
-exports.wrapPageElement = ({ element, props }) => {
-  // props provide same data to Layout as Page element will get
-  // including location, data, etc - you don't need to pass it
-  return <Layout {...props}>{element}</Layout>
+exports.onRenderBody = (
+  { setHeadComponents, setHtmlAttributes, setBodyAttributes }
+) => {
+  const helmet = Helmet.renderStatic()
+  setHtmlAttributes(helmet.htmlAttributes.toComponent())
+  setBodyAttributes(helmet.bodyAttributes.toComponent())
+  setHeadComponents([
+    helmet.title.toComponent(),
+    helmet.link.toComponent(),
+    helmet.meta.toComponent(),
+    helmet.noscript.toComponent(),
+    helmet.script.toComponent(),
+    helmet.style.toComponent(),
+  ])
 }
