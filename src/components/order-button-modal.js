@@ -38,10 +38,6 @@ export default function OrderButtonModal(){
 
       <Helmet>
       <script src="https://store.goorder.pl/goorder.js"></script>
-<<<<<<< HEAD
-=======
-      <script src="https://store.goorder.pl/goorder.js"></script>
->>>>>>> f7d76717c7326d15f72bb95501015022d4348ad7
       </Helmet>
       
 

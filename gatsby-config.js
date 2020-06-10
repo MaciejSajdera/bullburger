@@ -23,29 +23,11 @@ module.exports = {
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a41833`,
-<<<<<<< HEAD
         display: `standalone`,
         icon: `src/images/bbg-mini-logo.inline.svg`, // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
-=======
-        icon: `src/images/bbg-mini-logo-white.inline.svg`, // This path is relative to the root of the site.
-        icons: [
-        {
-          src: `/images/bbg-mini-logo.inline.svg`,
-          sizes: `192x192`,
-          type: `image/svg`,
-        },
-        {
-        src: `/images/bbg-mini-logo.inline.svg`,
-        sizes: `512x512`,
-        type: `image/svg`,
-        }
-        ],
-      },
-    },
->>>>>>> f7d76717c7326d15f72bb95501015022d4348ad7
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

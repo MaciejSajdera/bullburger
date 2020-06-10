@@ -11,7 +11,6 @@ const Header = (props) => {
 
   query MyNavQuery {
     LangPL: datoCmsNavMobile(locale: {eq: "pl"}) {
-<<<<<<< HEAD
       order
       home
       menu
@@ -25,17 +24,6 @@ const Header = (props) => {
       menu
       location
       terms
-=======
-      home
-      menu
-      location
-    }
-
-    LangEN: datoCmsNavMobile(locale: {eq: "en"}) {
-      home
-      menu
-      location
->>>>>>> f7d76717c7326d15f72bb95501015022d4348ad7
     }
   }
   `)

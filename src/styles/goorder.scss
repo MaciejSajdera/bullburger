@@ -10,13 +10,8 @@ div {
     white-space: nowrap;
     background: transparent;
     border: 3px solid #3CB359;
-<<<<<<< HEAD
     width: 130px;
     height: 130px;
-=======
-    width: 100px;
-    height: 100px;
->>>>>>> f7d76717c7326d15f72bb95501015022d4348ad7
     border-radius: 50%;
     font-family: "Source Sans Pro",sans-serif;
     color: white;
@@ -28,28 +23,17 @@ div {
     box-shadow: none;
 
     @media screen and (max-width: 999px) {
-<<<<<<< HEAD
         width: 100px;
         height: 100px;
         right: 70%;
-=======
-        width: 70px;
-        height: 70px;
-        right: 75.5%;
->>>>>>> f7d76717c7326d15f72bb95501015022d4348ad7
         top: 2%;
         border: 2px solid #3CB359;
     }
 
     @media screen and (max-width: 321px) {
-<<<<<<< HEAD
         width: 80px;
         height: 80px;
         right: 72%;
-=======
-        right: 72.5%;
-        top: 2%;
->>>>>>> f7d76717c7326d15f72bb95501015022d4348ad7
     }
 
     @media screen and (min-width: 500px) and (max-width: 768px) {
