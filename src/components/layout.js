@@ -42,7 +42,6 @@ const Layout = () => {
     setLang: setLang
   }
 
-
   return (
     <>
 

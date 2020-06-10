@@ -28,7 +28,11 @@ export const SectionWelcome = () => {
       <BbgSvgLogo />
     </div>
     <div className={`scroll-icon`} onClick={() => scrollTo('#menu')}>
+<<<<<<< HEAD
       <span className={`arrow-container`}><ArrowLogo /></span>
+=======
+      <ArrowLogo />
+>>>>>>> f7d76717c7326d15f72bb95501015022d4348ad7
     </div>
   </section>
  )
