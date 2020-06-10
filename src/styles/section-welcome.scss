@@ -1,0 +1,52 @@
+.first-section {
+    height: 100vh;
+
+    .gatsby-image-wrapper {
+         height: 100vh;
+    }
+
+    .bbg-logo {
+        display: flex;
+        justify-content: center;
+
+        svg {
+            position: absolute;
+            top: 40%;
+            margin: 0 auto;
+            width: 60vw;
+            max-width: 200px;
+            @media screen and (min-width: 1000px) {
+                max-width: 400px;
+            }
+        }
+    }
+
+    .scroll-icon {
+        display: flex;
+        justify-content: center;
+
+        @keyframes arrowanimation {
+            0% {padding-top: 0px;}
+            50% {padding-top: 20px;}
+            100% {padding-top: 0px;}
+          }
+
+        span.arrow-container {
+            width: 170px;
+            height: 170px;
+            position: absolute;
+            top: 75%;
+            display: flex;
+            justify-content: center;
+
+            svg {
+                width: 12vw;
+                max-width: 50px;
+                animation: arrowanimation 1.5s infinite;
+            }
+        }
+
+
+
+    }
+}

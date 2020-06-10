@@ -1,0 +1,58 @@
+.menu-section {
+    padding: 50px 0 0 0;
+    background-color: #ededed;
+
+    .menu-wrapper {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        .main-menu {
+            margin: auto;
+
+            .menu-items {
+                color:black;
+                padding: 0.5em;
+                max-width: 800px;
+
+                .burger {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+
+                    p {
+                        margin: 0 auto 0 auto;
+                        font-family: "Source Sans Pro",sans-serif;
+                        font-weight: 400;
+
+                        &:first-child {
+                            font-weight: 700;
+                            text-align: center;
+                            padding: 0em 0em 1.5em 0em;
+                            width: 24%;
+                            font-size: 105%;
+                            max-width: 85px;
+                            margin-right: 0em;
+                            text-align: left;
+                        }
+
+                        &:nth-child(2){
+                            font-weight: 400;
+                            padding: 0em 0em 1em 0.2em;
+                            width: 64%;
+                            font-size: 95%;
+                        }
+
+                        
+                        &:nth-child(3){
+                            font-weight: 700;
+                            padding: 0em 0em 0em 0.2em;
+                            width: 12%;
+                            font-size: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

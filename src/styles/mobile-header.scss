@@ -1,0 +1,185 @@
+
+  .mobile-header {
+      top: -100vh;
+      opacity: 0;
+  }
+
+  .menu-open {
+        position: fixed;
+        left: 0;
+        z-index: 100;
+        display: block;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 0!important;
+        transition: .4s ease-in-out;
+        opacity: 1;
+        background-color: #a41833;
+  }
+
+  .menu-closed {
+    top: -100vh;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 0!important;
+    transition: .4s ease-in-out;
+    background-color: #a41833;
+  }
+
+  .nav-mobile {
+    width: 100%;
+
+    ul#nav-items-list {
+      height: 50vh;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      margin-top: 10vh;
+      font-family: "Source Sans Pro",sans-serif;
+      font-size: 150%;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      @media screen and (min-width: 500px) and (orientation: landscape) {
+        font-size: 120%;
+        height: 40vh;
+        margin-top: 25vh;
+      }
+
+
+      li {
+        margin: 1rem auto;
+        list-style: none;
+        @media screen and (min-width: 500px) and (orientation: landscape) {
+          margin: 1rem auto;
+        }
+
+        @media screen and (max-height: 568px) {
+          margin: 0.7rem auto;
+          font-size: 80%;
+        }
+
+        a {
+          transition: 0.3s ease-in-out;
+        }
+
+        a.english {
+          animation: mymove3 1s;
+        }
+
+        a.polish {
+          animation: mymove4 1s;
+        }
+
+        @keyframes mymove3 {
+          0% {transform: translateX(0%); opacity: 0}
+          50% {transform: translateX(-100%)}
+          100% {transform: translateX(0%); opacity: 1}
+        }
+
+        @keyframes mymove4 {
+          0% {transform: translateX(0%); opacity: 0}
+          50% {transform: translateX(-100%)}
+          100% {transform: translateX(0%); opacity: 1}
+        }
+      }
+    }
+
+    .nav-sub {
+      width: 100%;
+      display: flex;
+      height: 10vh;
+      @media screen and (min-width: 500px) and (orientation: landscape) {
+      height: 0vh;
+      margin-top: 2em;
+      }
+
+      ul#nav-sub-list {
+      height: 20vh;
+      margin: auto;
+      display: flex;
+      flex-flow: row;
+      font-family: "Source Sans Pro",sans-serif;
+      font-size: 120%;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      }
+
+      li {
+        padding: 0.7rem;
+        list-style: none;
+
+        .lang-clicked:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+        }
+      }
+    }
+
+    #social-media-icons {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      @media screen and (min-width: 500px) and (orientation: landscape) {
+        flex-flow: row;
+        justify-content: space-between;
+      }
+
+      a {
+        margin: 0 auto;
+
+        @media screen and (min-width: 500px) and (orientation: landscape) {
+        position: absolute;
+          
+        &:nth-child(1) {
+          right: 7.5%;
+          bottom: 1em;
+        }
+
+        &:nth-child(3) {
+          left: 7.5%;
+          bottom: 1em;
+        }
+
+        }
+      }
+
+
+      a#facebook-icon svg {
+        margin-bottom: 1rem;
+        font-size: 250%;
+        fill: white;
+        margin: 0.5em auto;
+        @media screen and (min-width: 500px) and (orientation: landscape) {
+          font-size: 200%;
+        }
+
+      span {
+        width: 7%;
+      }
+      }
+
+      // for trip-icon with trip
+      // a#trip-icon svg{
+      //   width: 7em;
+      //   margin-bottom: 1rem;
+      //   fill: white;
+      //   margin: 0.5em auto;
+      //   font-size: 100%;
+      //   height: 100%;
+      //   @media screen and (min-width: 500px) and (orientation: landscape) {
+      //     width: 5em;
+      //   }
+      // }
+    }
+  }

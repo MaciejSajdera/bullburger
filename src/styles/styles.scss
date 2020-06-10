@@ -1,0 +1,101 @@
+    h4 {
+    margin: auto;
+    font-family: "Source Sans Pro",sans-serif;
+    font-weight: 900;
+    color: #a6a6a6;
+    padding: 0;
+    font-size: 120%;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #a6a6a6;
+
+    &:before {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 15px auto;
+    content: "";
+    background-color: #a6a6a6;
+    }
+
+    &:after {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 15px auto;
+    content: "";
+    background-color: #a6a6a6;
+    }
+
+    }
+
+    h2 {
+    margin: 27px auto;
+    font-family: "Playfair Display",serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 300%;
+    text-align: center;
+    color: #000;
+    }
+
+    //hamburger
+    .ham {
+        position: fixed;
+        right: 15px;
+        top: 10px;
+        z-index: 101;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .hamRotate.active {
+        transform: rotate(45deg);
+      }
+      .hamRotate180.active {
+        transform: rotate(180deg);
+      }
+      .line {
+        fill:none;
+        transition: stroke-dasharray 200ms, stroke-dashoffset 200ms;
+        stroke:white;
+        stroke-width:5.5;
+        stroke-linecap:round;
+      }
+
+      .line-black {
+        stroke:black;
+      }
+
+      .ham8 .top {
+        stroke-dasharray: 40 160;
+      }
+      .ham8 .middle {
+        stroke-dasharray: 40 142;
+        transform-origin: 50%;
+        transition: transform 200ms;
+      }
+      .ham8 .bottom {
+        stroke-dasharray: 40 85;
+        transform-origin: 50%;
+        transition: transform 200ms, stroke-dashoffset 200ms;
+      }
+      .ham8.active .top {
+        stroke-dashoffset: -64px;
+      }
+      .ham8.active .middle {
+        //stroke-dashoffset: -20px;
+        transform: rotate(90deg);
+      }
+      .ham8.active .bottom {
+        stroke-dashoffset: -64px;
+      }
+
+      .ReactModal__Overlay {
+        background: none!important;
+      }

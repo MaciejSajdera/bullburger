@@ -1,0 +1,50 @@
+.section-location {
+    padding: 50px 0 0 0;
+
+    .location-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        padding: 0.5em;
+        font-family: "Source Sans Pro",sans-serif;
+
+     h2 {
+         margin-bottom: 1em;
+     }
+
+     .location-items {
+        margin: auto;
+        width: 80vw;
+        max-width: 500px;
+
+      .days-hours {
+        display: flex;
+        padding: 0em 2em 0em 2em;
+
+        p {
+          text-align: left;
+          border-bottom: 1px solid black;
+
+            &:first-child {
+            font-weight: 700;
+            width: 50%;
+            }
+
+            &:nth-child(2) {
+                font-weight: 400;
+                width: 50%;
+                text-align: right;
+                }
+            }
+        }
+    }
+
+    p.adress-info {
+        text-align: center;
+        font-size: 120%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+  }
+}
