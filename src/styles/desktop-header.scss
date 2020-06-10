@@ -180,8 +180,6 @@
       flex-flow: row;
       overflow: hidden;
       align-items: center;
-      position: absolute;
-      right: 1em;
 
       a {
         transition: all 0.3s ease-out;
@@ -249,34 +247,4 @@
       background-color: #fff;
     }
   }
-}
-
-#social-media-icons {
-  display: flex;
-  flex-flow: row;
-  overflow: hidden;
-  align-items: center;
-  position: absolute;
-  right: 1em;
-
-  a {
-    transition: all 0.3s ease-out;
-    height: 100%;
-    margin-right: 2em;
-    padding: 1.25em 1em 1em 1em;
-
-    svg {
-    font-size: 230%;
-    fill: white;
-    height: 1em;
-    }
-
-    svg#Layer_1{
-      width: 3.7em;
-    }
-
-    &:hover {
-      transform: scale(1.2);
-    }
- }
 }
