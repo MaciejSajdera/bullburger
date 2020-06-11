@@ -180,6 +180,8 @@
       flex-flow: row;
       overflow: hidden;
       align-items: center;
+      position: absolute;
+      right: 1em;
 
       a {
         transition: all 0.3s ease-out;
