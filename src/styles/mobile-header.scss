@@ -52,6 +52,9 @@
         margin-top: 25vh;
       }
 
+      @media screen and (max-height: 640px) {
+        margin-top: 7vh;
+      }
 
       li {
         margin: 1rem auto;
