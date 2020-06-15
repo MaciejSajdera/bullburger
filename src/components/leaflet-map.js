@@ -23,14 +23,14 @@ export default class MyMap extends Component {
     zoom: 30,
     markerText: "We are here! | BULL BURGER GRILL"
   }
-
+  
   render() {
 
     if (typeof window !== 'undefined') {
       return (
           <Map center={this.props.position} zoom={this.props.zoom}>
           <TileLayer
-            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+            url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
             attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           />
           {this.props.markerText !== "" &&
