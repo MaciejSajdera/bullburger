@@ -31,7 +31,7 @@ export default class MyMap extends Component {
           <Map center={this.props.position} zoom={this.props.zoom}>
           <TileLayer
             url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
-            attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+            attribution="&copy; <a href=&quot;https://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           />
           {this.props.markerText !== "" &&
           <Marker position={this.props.position}>
