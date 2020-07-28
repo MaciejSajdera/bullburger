@@ -47,7 +47,7 @@ const Layout = () => {
 
       <Header {...commonProps} {...langProps}/>
 
-      <OrderButtonLazy />
+      <OrderButtonLazy {...commonProps} {...langProps}/>
 
       <SectionWelcome />
 

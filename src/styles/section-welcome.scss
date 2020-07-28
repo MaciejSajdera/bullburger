@@ -39,6 +39,11 @@
             display: flex;
             justify-content: center;
 
+            @media screen and (max-height:440px) and (orientation: landscape) {
+               top: 65%;
+            }
+
+
             svg {
                 width: 12vw;
                 max-width: 50px;
