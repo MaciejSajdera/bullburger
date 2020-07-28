@@ -19,8 +19,9 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Bull Burger Grill`,
-        short_name: `BBG`,
+        short_name: `Bull Burger Grill`,
         start_url: `/`,
+        display: `standalone`,
         background_color: `#f7f0eb`,
         theme_color: `#a41833`,
         display: `standalone`,
