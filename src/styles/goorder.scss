@@ -131,17 +131,18 @@ div {
     transform: translateY(-3.5em);
     font-family: "Source Sans Pro",sans-serif;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.1;
     z-index: 1;
     font-size: 130%;
     overflow-wrap: break-word;
-    width: 80px;
+    width: 90px;
     cursor: pointer;
+    text-transform: uppercase;
 
     @media screen and (min-width: 1000px)  {
         // right: 85%;
-        // top: 3%;
-        width: 110px;
+        top: 15%;
+        width: 120px;
         font-size: 160%;
     }
 }
